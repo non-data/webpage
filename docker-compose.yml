@@ -1,0 +1,16 @@
+web:
+  build: ./web
+  volumes:
+    - ./resources:/var/myweb
+  ports:
+    - 8080:80
+  links:
+    - db:db-server
+db:
+  build: ./mysql
+  enviroment:
+    MYSQL_DATABASE: [db_name]
+    MYSQL_USER: [db_user]
+    MYSQL_PASSWORD: [db_pass]
+    MYSQL_ROOT_PASSWORD: [db_root_pass]
+
