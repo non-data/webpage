@@ -3,14 +3,16 @@ web:
   volumes:
     - ./resources:/var/myweb
   ports:
-    - 8080:80
+    - 80:80
   links:
     - db:db-server
+  privileged: true
 db:
   build: ./mysql
-  enviroment:
-    MYSQL_DATABASE: [db_name]
-    MYSQL_USER: [db_user]
-    MYSQL_PASSWORD: [db_pass]
-    MYSQL_ROOT_PASSWORD: [db_root_pass]
-
+  environment:
+  environment:
+    MYSQL_DATABASE: mypage
+    MYSQL_USER: mypage
+    MYSQL_PASSWORD: P@ssw0rd
+    MYSQL_ROOT_PASSWORD: P@ssw0rd
+  privileged: true
