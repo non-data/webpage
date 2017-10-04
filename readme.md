@@ -1,4 +1,6 @@
 # sagyo
 
 ## build
-```sudo docker run --privileged -itd -p 80:80 -t web
+```
+sudo docker run --privileged -itd -p 80:80 -t web
+```
