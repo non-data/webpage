@@ -10,7 +10,6 @@ web:
 db:
   build: ./mysql
   environment:
-  environment:
     MYSQL_DATABASE: mypage
     MYSQL_USER: mypage
     MYSQL_PASSWORD: P@ssw0rd
